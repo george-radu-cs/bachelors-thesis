@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package alfie.protobuf;
+
+service Alfie {
+  // auth management
+  rpc Register 
+  rpc VerifyUserAccount
+  rpc ResendUserVerificationCode
+  rpc Login (LoginRequest)
+  rpc VerifyLoginCode
+  rpc ForgotPassword
+  rpc ResetPassword
+
+  // user management
+  rpc UpdateUserInfo
+  rpc UpdatePassword
+
+  // media & backup management
+  rpc CreateUploadURLForCardsDatabaseBackup
+  rpc CreateDownloadURLForCardsDatabaseBackup
+  rpc CreateMediaFilesUploadURLs
+  rpc CreateMediaFilesDownloadURLs
+  rpc DeleteUnusedMediaFiles
+}

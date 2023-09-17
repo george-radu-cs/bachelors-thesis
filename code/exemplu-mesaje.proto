@@ -1,0 +1,14 @@
+message SimpleMessage {
+  string message = 1;
+}
+
+message HelloWorldRequest {
+  string id = 1;
+  string name = 2;
+  int64 submission = 3;
+  bool isWinner = 4;
+}
+
+message HelloWorldReply {
+  repeated SimpleMessage messages = 1;
+}
